@@ -1,0 +1,42 @@
+.fst-mentor-session{
+    background: url('./../../../public/mentorshipImg/handshake.webp');
+    overflow: hidden;
+    height: 330px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+}
+.fst-mentor-session h1{
+
+}
+.fst-mentor-session span{
+
+}
+.fst-mentor-sessionh5{
+
+}
+.fst-mentor-session button{
+
+}
+
+.sec-mentor-session{
+   
+    background: url('./../../../public/mentorshipImg/handshake.webp');
+    height: 330px;
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+
+}
+.sec-mentor-session i{
+
+}
+.sec-mentor-session span{
+
+}
+
+.mentorship-session div{
+    border: 1px solid red;
+
+}

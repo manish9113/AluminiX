@@ -1,0 +1,73 @@
+/* ProfileCard.css */
+.profile-main{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 31px 0px 0px 0px;
+    justify-content: space-between;
+}
+.profile-card {
+    min-width: 23.5%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  .status-badge {
+    background-color: #4caf50; /* Green for available */
+    color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .profile-image img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+  }
+  
+  .profile-info h3 {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  .name-rating{
+    display: flex;
+    justify-content: center;
+  }
+  .rating {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    position: relative;
+    top: 11.5px;
+    left: 12px;
+  }
+  
+  .profile-info p {
+    margin: 2px 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .view-profile-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .view-profile-button:hover {
+    background-color: #0056b3;
+  }
+  

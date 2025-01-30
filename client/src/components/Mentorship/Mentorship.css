@@ -1,0 +1,66 @@
+
+.mentor-container{
+    /* border: 1px solid red; */
+    margin-top: 60px;
+}
+.mentor-container *{
+    font-family: "Inter", sans-serif;
+}
+.top-most{
+    background: #f6f6f6;
+}
+.topRightImg{
+    width: 100%;
+}
+.ment-top h1{
+    font-size: 50px;
+}
+.ment-top span{
+    color: #0037e6;
+}
+.ment-top p{
+    color: #727272;
+    margin: 27px 0px 20px 0px;
+}
+.ment-top {
+    position: relative;
+    top: 120px;
+    left: 66px;
+} 
+
+.mentor-btns i{
+    font-size: 18px;
+    position: relative;
+    top: 2px;
+    right: 6px;
+}
+.mentor-btns button{
+    font-size: 17px;
+    padding: 9px 22px;
+    border-radius: 30px;
+}
+.fst-btn{
+    background: #00376e;
+    color: white;
+    border: none;
+}
+.sec-btn{
+    margin-left: 1rem;
+    background: none;
+    color: blue;
+    border: 1px solid blue;
+}
+/*  level 2 */
+
+.domains{
+    margin-top: 43px;
+    border: 1px solid green;
+}
+.domains h3{
+    font-size: 37px;
+    text-align: center;
+    font-weight: 600;
+}
+.domains span{
+    color: #00376e;
+}
