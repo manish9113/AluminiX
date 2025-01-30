@@ -13,7 +13,7 @@ function PostComments() {
    useEffect(() => {
      const fetchPosts = async () => {
        try {
-         const response = await axios.get("http://localhost:5000/allPosts");
+         const response = await axios.get("https://aluminix.onrender.com/allPosts");
          console.log(response.data.posts[0].postProfileUrl);
          setRes(response.data.posts);
         
