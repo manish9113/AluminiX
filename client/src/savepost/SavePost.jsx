@@ -35,7 +35,7 @@ function SavePost() {
     try {
       const formData = new FormData();
       formData.append("file", file);
-      const res = await axios.post("http://localhost:5000/upload", formData, {
+      const res = await axios.post("https://aluminix.onrender.com/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -45,7 +45,7 @@ function SavePost() {
         postData: postdata,
         postProfileUrl:res.data.url,
       };
-      const savedPost= await axios.post("http://localhost:5000/postAlumini",newPost);
+      const savedPost= await axios.post("https://aluminix.onrender.com/postAlumini",newPost);
       console.log("saved post",savedPost.data);
     } catch (error) {
       console.log("error while saving posts");
