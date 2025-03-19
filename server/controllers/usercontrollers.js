@@ -3,7 +3,8 @@ import bcrypt from 'bcryptjs';
 
 export const saveUser = async (req, res) => {
     try {
-        const { name, email, university, universityregno, passbatchyear, pictureurl, password, confirmpassword } = req.body;
+        console.log(req.body)
+        const { name, email, university, registrationNo, batchYear, password, confirmpassword } = req.body;
 
         // Check if password and confirm password match
         if (password !== confirmpassword) {
@@ -16,7 +17,7 @@ export const saveUser = async (req, res) => {
         const hashedPassword = await bcrypt.hash(password, 10); 
 
         const newUser = new User({
-            name, email, university, universityregno, passbatchyear, pictureurl, password: hashedPassword, confirmpassword: hashedPassword
+            name, email, university, registrationNo, batchYear, password: hashedPassword
         });
 
         
@@ -30,7 +31,7 @@ export const saveUser = async (req, res) => {
     } catch (error) {
         console.log("Error while saving user to the database:", error);
 
-        // Check if the error is related to a duplicate email (MongoDB error code 11000)
+       
         if (error.code === 11000) {
             return res.status(400).json({
                 message: "Email is already in use. Please choose a different email."

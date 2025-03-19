@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import {useNavigate} from 'react-router-dom'
+import axios from 'axios'
 
 function Signup() {
   const [show, setShow] = useState(false);
@@ -50,8 +51,39 @@ function Signup() {
     // Handle file upload logic here
   };
 
-  const submitHandler = () => {
-    navigate('/home')
+  const submitHandler = async() => {
+    const signup_data = {
+      name,
+      email,
+      password,
+      confirmpassword,
+      university,
+      college,
+      registrationNo,
+      batchYear,
+    };
+   try{
+      const response= await axios.post("http://localhost:5000/studentsignup", signup_data);
+      if(response.status===201){
+        setName("")
+        setEmail("")
+        setPassword("")
+        setConfirmpassword("")
+        setUniversity("")
+        setCollege("")
+        setRegistrationNo("")
+        setBatchYear("")
+        navigate('/home')
+      }
+   }
+   catch(error){
+     if(error.response.status===400){
+      alert("email already exists")
+     }
+     else{
+      console.log("error while signup user",error)
+     }
+    }
   };
 
   return (

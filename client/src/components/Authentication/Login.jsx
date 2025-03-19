@@ -9,10 +9,11 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Login() {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [email, setEmail] = useState("testmail@gmail.com");
+  const [password, setPassword] = useState("123456");
   const [show, setShow] = useState(false);
 
   const navigate = useNavigate();
@@ -24,8 +25,37 @@ function Login() {
   const handleClick = () => {
     setShow(!show);
   };
-  const submitHandler = () => {
-    navigate('/home')
+  const submitHandler = async () => {
+    const login_data = {
+      email,
+      password,
+    };
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/studentlogin",
+        login_data
+      );
+      if(response.status===200){
+        setEmail("")
+        setPassword("")
+      }
+      navigate("/home")
+
+    } catch (error) {
+      if(error.response.status===404){
+        alert("user does not exists")
+        setEmail("");
+        setPassword("");
+      }
+      else if(error.response.status===401){
+        alert("password doesnot match")
+        setPassword("");
+      }
+      else{
+        console.log("error while logging in user", error);
+      }
+      
+    }
   };
 
   return (

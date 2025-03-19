@@ -12,8 +12,8 @@ Router.get('/',(req,res)=>{
 })
 Router.post('/postAlumini',savePosts);
 Router.get('/allPosts',getAllPosts);
-Router.post('/saveusers',saveUser);
-Router.get('/loginuser',loginUser);
+Router.post('/studentsignup',saveUser);
+Router.post('/studentlogin',loginUser);
 Router.post('/upload', upload.single('file'), Uploadimg);
 
 

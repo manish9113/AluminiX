@@ -18,41 +18,23 @@ const userSchema=mongoose.Schema({
         trim:true,
         lowercase:true,
     },
-    universityregno:{
+    registrationNo:{
         type:Number,
         required:true,
     },
-    passbatchyear:{
+    batchYear:{
         type:Number,
         required: true,
-        validate: {
-            validator: function (v) {
-                return v >= 100000 && v <= 999999; // Check if the number is within the 6-digit range
-            },
-            message: props => `${props.value} is not a valid 5-digit number!`
-        },
-
     },
-    pictureurl:{
-        type:String,
+    // pictureurl:{
+    //     type:String,
 
-    },
+    // },
     password:{
         type:String,
         required:true,
         minlength:5,
-    },
-    // confirmpassword:{
-    //     type:String,
-    //     required:true,
-    //     validate: {
-    //         // Custom validator to check if confirmpassword matches password
-    //         validator: function (value) {
-    //             return value === this.password; // `this` refers to the current document
-    //         },
-    //         message: "Confirm password must match the password."
-    //     }
-    // }
+    }
 
 })
 

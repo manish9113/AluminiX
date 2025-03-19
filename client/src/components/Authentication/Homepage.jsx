@@ -17,7 +17,9 @@ const typing = keyframes`
 // Keyframes for erasing the text
 const erasing = keyframes`
   0% { width: 100% }
+  25% {width:75%}
   50% { width: 50% }
+  75% {width:25%}
   100% { width: 0 }
 `;
 
@@ -29,7 +31,6 @@ const Homepage = () => {
         backgroundSize: "cover", // Ensures the image covers the entire background
         backgroundPosition: "center", // Centers the image
         height: "100vh", // Full viewport height
-        
       }}
     >
       <Container maxW="7xl" centerContent>

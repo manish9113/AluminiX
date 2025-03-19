@@ -27,7 +27,7 @@ function AdminLogin() {
   };
 
   const submitHandler = () => {
-    navigate('/home');
+    
   };
 
   return (
