@@ -63,7 +63,7 @@ function Signup() {
       batchYear,
     };
    try{
-      const response= await axios.post("http://localhost:5000/studentsignup", signup_data);
+      const response= await axios.post("https://aluminix.onrender.com/studentsignup", signup_data);
       if(response.status===201){
         setName("")
         setEmail("")
