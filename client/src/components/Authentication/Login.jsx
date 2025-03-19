@@ -32,7 +32,7 @@ function Login() {
     };
     try {
       const response = await axios.post(
-        "http://localhost:5000/studentlogin",
+        "https://aluminix.onrender.com/studentlogin",
         login_data
       );
       if(response.status===200){
